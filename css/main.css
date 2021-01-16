@@ -13,5 +13,114 @@ body {
 
 body {
     font-family: "Merriweather", serif;
-    bottom: -5;
+    font-size: 16px;
+    background-color: #b8a581;
+    color: #333;
+}
+
+img {
+    display: block;
+}
+
+a,
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.dark {
+    background: #333;
+    color: #fff;
+}
+
+.maxwidth {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50px;
+    box-shadow: 2px 0 5px #333;
+}
+
+h1 {
+    font-size: 1.74rem;
+}
+
+.bar {
+    display: none;
+}
+
+.nav {
+    display: block;
+    position: relative;
+}
+
+.nav__burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: 0 10px;
+}
+
+.nav__burger,
+.nav__burger::before,
+.nav__burger::after {
+    opacity: 1;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav__burger::before,
+.nav__burger::after {
+    content: "";
+    position: absolute;
+}
+
+.nav__burger::before {
+    transform: translateY(-8px);
+}
+
+.nav__burger::after {
+    transform: translateY(8px);
+}
+
+.nav__burger-btn.open .nav__burger {
+    background: transparent;
+}
+
+.nav__burger-btn.open .nav__burger::before {
+    background: #ff0000;
+    transform: rotate(45deg);
+}
+
+.nav__burger-btn.open .nav__burger::after {
+    background: #ff0000;
+    transform: rotate(-45deg);
 }
