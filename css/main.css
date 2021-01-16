@@ -58,7 +58,7 @@ a:hover {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 50px;
+    /* height: 50px; */
     box-shadow: 2px 0 5px #333;
 }
 
@@ -123,4 +123,39 @@ h1 {
 .nav__burger-btn.open .nav__burger::after {
     background: #ff0000;
     transform: rotate(-45deg);
+}
+
+.nav__list {
+    position: absolute;
+    top: 50;
+    left: 0;
+    display: none;
+    width: 100vw;
+    padding: 10px;
+    list-style-type: none;
+    background: #333;
+    animation: showMenu 0.5s ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes showMenu {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.nav__item {
+    display: block;
+    font-size: 1.75rem;
+    padding: 20px;
+}
+
+.nav__list.open {
+    display: block;
 }
